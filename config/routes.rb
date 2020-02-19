@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   resources :gardens, only: :show do
     resources :plants, only: :create
+
+    member do
+      # delete 'burn_it_all'
+    end
   end
 
   resources :plants, only: :destroy
